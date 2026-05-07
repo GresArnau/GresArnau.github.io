@@ -34,6 +34,7 @@ header h4 {
   font-size: 5vh;
   text-shadow: 2px 2px #0B6191;
   float: right;
+  margin-right: 2vw;
 }
 header h4 a {
   color: #AAE5FA;
@@ -58,6 +59,8 @@ nav ul li {
   text-align: center;
   border: 1px solid #012538;
   width: 20%;
+  flex: 1;
+  min-width: 100px;
 }
 nav ul li a {
   display: block;
@@ -99,13 +102,27 @@ article img {
   padding: 2vw;
 }
 
+/* Responsive column layout - Tablet (768px-1023px): 2 columns */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .columna {
+    width: 50%;
+  }
+}
+
+/* Responsive column layout - Mobile (max 767px): 1 column */
+@media (max-width: 767px) {
+  .columna {
+    width: 100%;
+  }
+}
+
 /* Footer */
 footer {
   background-color: #012538;
-  padding: 10px;
+  padding: 20px 10px;
   text-align: center;
   color: whitesmoke;
-  height: 7vw;
+  min-height: auto;
 }
 
 fieldset {
@@ -113,25 +130,93 @@ fieldset {
   box-shadow: 3px 5px 4px 5px #012538;
 }
 
-/* Responsive design */
-@media (max-width: 600px) {
+/* Responsive design - Mobile (max 479px) */
+@media (max-width: 479px) {
   header {
-    padding: 10px;
-    text-align: center;
-    font-size: 1.5em;
-    color: #AAE5FA;
-    height: 20vh;
+    padding: 15px;
+    height: auto;
+    min-height: 30vh;
   }
 
   header h2 {
-    margin-top: 3vh;
-    font-size: 15vh;
+    margin-top: 2vh;
+    font-size: 6vw;
     text-shadow: 1px 1px #012538;
   }
 
   header h4 {
-    margin-top: 1vh;
-    font-size: 5vh;
+    margin-top: 0.5vh;
+    font-size: 3vw;
     text-shadow: 1px 1px #012538;
+    float: none;
+    margin-right: 0;
+  }
+
+  nav ul {
+    flex-direction: column;
+  }
+
+  nav ul li {
+    width: 100%;
+    border-bottom: 1px solid #012538;
+  }
+
+  nav ul li:last-child {
+    border-bottom: none;
+  }
+
+  article {
+    padding: 15px;
+  }
+
+  .columna {
+    padding: 1vw;
+  }
+
+  fieldset {
+    margin-top: 5px;
+    box-shadow: 2px 3px 2px 3px #012538;
+  }
+}
+
+/* Responsive design - Tablet (480px - 767px) */
+@media (min-width: 480px) and (max-width: 767px) {
+  header {
+    padding: 20px;
+    height: auto;
+    min-height: 25vh;
+  }
+
+  header h2 {
+    margin-top: 3vh;
+    font-size: 7vw;
+  }
+
+  header h4 {
+    margin-top: 1vh;
+    font-size: 4vw;
+    float: none;
+    margin-right: 0;
+    margin-top: 1rem;
+  }
+
+  nav ul {
+    flex-wrap: wrap;
+  }
+
+  nav ul li {
+    width: 50%;
+  }
+}
+
+/* Responsive design - Desktop (768px and up) */
+@media (min-width: 768px) {
+  header h4 {
+    float: right;
+    margin-right: 2vw;
+  }
+
+  nav ul li {
+    width: 20%;
   }
 }
