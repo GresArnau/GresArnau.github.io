@@ -219,4 +219,42 @@ fieldset {
   nav ul li {
     width: 20%;
   }
+}}
+
+/* Additional styles for content */
+article h3 {
+  color: #012538;
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+
+article p {
+  line-height: 1.6;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+article strong {
+  color: #0B6191;
+  font-weight: bold;
+}
+
+article ul, 
+article ol {
+  color: #333;
+}
+
+article li {
+  margin-bottom: 8px;
+  line-height: 1.5;
+}
+
+article a {
+  color: #0B6191;
+  text-decoration: none;
+}
+
+article a:hover {
+  text-decoration: underline;
+  color: #47A7D2;
 }
